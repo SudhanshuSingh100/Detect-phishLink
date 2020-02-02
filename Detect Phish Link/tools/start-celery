@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+
+celery worker -A proj --loglevel=debug --concurrency=2

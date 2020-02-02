@@ -1,0 +1,9 @@
+{% extends 'proj/base.html' %}
+
+{% block head_content %}
+<form action='tasks' method='post'>
+    <label for='url'>URL:</label>
+    <input type='text' name='url'>
+    <input type='submit' value='Submit'>
+</form>
+{% endblock %}

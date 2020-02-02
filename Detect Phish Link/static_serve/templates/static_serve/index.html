@@ -1,0 +1,227 @@
+﻿
+<!DOCTYPE html>
+	<html>
+	<head>
+		{% block head %}
+			{% load static %}
+				<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}"/>
+		{% endblock head %}
+	</head>
+	<body>
+
+ {% block content %}
+
+	<div class="backimg">
+		<div class="menu">
+			<div class="leftmenu"><h4>Phishing Websites Detection</h4></div>
+
+		    <div class="rightmenu">
+              <ul>
+              	  <li class="hidden">
+					<a href="#page-top"></a></li>
+              	   <li id="firstlst"><a class="page-scroll" href="#page-top">Home</a></li>
+              	   <li><a class="page-scroll" href="#about">About</a></li>
+                  <li> <a class="page-scroll" href="#phishing">Phishing</a></li>
+                   <li><a class="page-scroll" href="#activity">Activity</a></li>
+                   <li><a class="page-scroll" href="#preventions">Preventions</a></li>
+                  <li><a class="page-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+        </div>
+
+
+	    <div class="text">
+	    	<h4></h4>
+            <h3>The best free service to check legitimate websites </h3>
+            <h4>Provide strong security is our priority</h4>
+
+           <div class="text-input-transparent">
+
+	    	    <form action="/formUrl/" method= "GET" role='search'>
+                            {{ form }}
+                     <input id="input" autocapitalize='none' name='url' placeholder='Search and identify through url...' required='required' type='url' value='{{ form.url }}'>
+                     {{ form.url }}
+
+                    <button type="url" id="bt1" value="Check">Check</button>
+
+                        {% if form.errors %}
+                <p>Please enter in correct url format</p>
+                           {% endif %}
+
+               </form>
+
+            </div>
+
+         <div class='search'>
+        </div>
+
+</div>
+
+<br><br><br><br><br><br><hr>
+
+
+<section class="section-cta">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 text-center">
+						<h2 style="margin-left:350px"> We are trying to give you a better result.</h2><p>&nbsp;</p>
+					</div>
+
+				</div>
+		</div>
+
+</section>
+
+<section id="about" class="light-bg">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title"><p>&nbsp;</p>
+							<h2>About Me</h2>
+					<div id="containerroot" style="background-color:cornflowerblue;">
+
+						<div id="rightcontainer" style="float:left;"><br>
+							<h2 style="margin-left: 100px; color:white;">Hello there ! </h2>
+							<p style="float:left; margin-right: 550px;">
+
+								hello I'm a Student of Aligarh Muslim University  .I am developing a web application which detect legitimacy of web or not, about the nature of the website , reputable, genuine and secure platform. <br>My aim behind this advance project is to spread the awareness in-between the people about cybersecurity dominantly phishing which is a burning issue in the entire world. </p>
+					     </div>
+
+
+						 <div id="leftcontainer" style="">
+															<picture  style="float:right; margin-left: 150px; margin-right: 125px;">
+																<img id="img1" src="{% static 'images/itsme.png' %}" alt="Sudhann">
+															</picture>
+                         </div>
+
+						<p>&nbsp;</p>
+                    </div>
+
+						</div>
+					</div>
+				</div>
+             </div>
+
+ </section>
+
+
+
+  <section id="phishing" class="light-bg">
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>Phishing Techniques</h2>
+							<p>Phishing sites which expects to take the victims
+                               confidential data by diverting them to surf a fake website page that resembles a honest to goodness one is another type of criminal acts through the internet .<br>There are a number of different techniques used to obtain personal information from users. As technology becomes more advanced, the cybercriminals' techniques being used are also more advanced.
+                               To prevent Internet phishing, users should have knowledge of how the bad guys do this and they should also be aware of anti-phishing techniques to protect themselves from becoming victims.<br>
+                              </p>  <br>
+                               <br><br>
+                               <h4>Email/Spam</h4><p>Using the most common phishing technique, the same email is sent to millions of users with a request to fill in personal details. These details will be used by the phishers for their illegal activities. Most of the messages have an urgent note which requires the user to enter credentials to update account information, change details, or&nbsp;verify accounts. Sometimes, they may be asked to fill out a form to access a new service through a link which is provided in the email.</p><br>
+
+                               <h4>Web Based Delivery</h4>
+<p>Web based delivery is one of the most sophisticated phishing techniques. Also known as “man-in-the-middle,” the hacker is located in between the original website and the phishing system. The phisher traces details during a transaction between the legitimate website and the user. As the user continues to pass information, it is gathered by the phishers, without the user knowing about it.</p>
+<br>
+
+                               <h4>Link Manipulation</h4>
+<p>Link manipulation is the technique in which the phisher sends a link to a malicious website. When the user clicks on the deceptive link, it opens up the phisher’s website instead of the website mentioned in the link. Hovering the mouse over the link to view the actual address&nbsp;stops users from falling for link manipulation.</p>
+<br>
+
+                                <h4>Keyloggers</h4>
+<p>Keyloggers refer to the malware used to identify inputs from the keyboard. The information is sent to the hackers who will decipher passwords and other types of information. To prevent key loggers from accessing personal information, secure websites provide options to use mouse clicks to make entries through the virtual keyboard.</p>
+<br>
+
+                               <h4>Session Hijacking</h4>
+<p>In <a href="https://www.owasp.org/index.php/Session_hijacking_attack" target="_blank">session hijacking</a>, the phisher exploits the web session control mechanism to steal information from the user. In a simple session hacking procedure known as session sniffing, the phisher can use a sniffer to intercept relevant information so that he or she can access the Web server illegally.</p>
+<br>
+                                <h4>Vishing (Voice Phishing)</h4>
+<p>In phone phishing, the phisher makes phone calls to the user and asks the user to dial a number. The purpose is to get personal information of the bank account through the phone. Phone phishing is mostly done with a fake caller ID.</p>
+<br>
+
+                               <h4>Ransomware</h4>
+<p>Ransomware denies access to a device or files until a ransom has been paid. <a href="https://www.owasp.org/index.php/Session_hijacking_attack" target="_blank">Ransomware</a> for PC's is malware that gets installed on a user’s workstation using a social engineering attack where the user gets tricked in clicking on a link, opening an attachment, or clicking on malvertising.</p>
+<p>&nbsp;</p>
+
+
+                               <br><br>
+						</div>
+					</div>
+				</div>
+             </div>
+
+ </section>
+
+    <section id="activity" class="light-bg">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>Activity</h2><br>
+							<p>Proposed a model that can detect a website is phishing or not. They uses six different machine learning based classification algorithm named Naïve Bayes,J48, SVM, Random Forrest, Tree Bag and IBK lazy classifier with 92.7846%, 95.11%, 96.57%, 96.3%, 93.85%, 93.4039% classification accuracy respectively. Their split ratio is 70-30.Where 70% accounts to training and rest for testing. Our aim is to extend their work to gain more classification accuracy using those algorithms. <br><strong>Phishing Is More Than A Theme, It’s A Powerful  Tool</strong></p><p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+             </div>
+
+ </section>
+
+  <section id="preventions" class="light-bg">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>Prevention</h2>
+							<h4> Nobody wants to fall prey to a phishing scam. There’s a good reason that such scams will continue, though: They are successful enough for cybercriminals to make massive profits. Phishing scams have been around practically since the inception of the Internet, and they will not go away any time soon. Fortunately, there are ways to avoid becoming a victim yourself.</h4><br><br>
+								<br>Here are 10 basic guidelines in keeping yourself safe:
+								<ul style="margin-left:70px;"><li> Keep Informed About Phishing Techniques </li>
+                               	<li>Think Before You Click! </li>
+                               	<li> Install an Anti-Phishing Toolbar</li>
+                                <li>Verify a Site’s Security</li>
+                                <li> Check Your Online Accounts Regularly</li>
+                                <li> Keep Your Browser Up to Date</li>
+                                <li> Use Firewalls</li>
+                                <li> Use Firewalls</li>
+                                <li> Never Give Out Personal Information</li>
+                                <li> Use Antivirus Software</li>
+
+                               </ul><p>&nbsp;</p>
+						</div>
+					</div>
+				</div>
+             </div>
+
+ </section>
+
+  <section id="contact" class="light-bg">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title"><p>&nbsp;</p>
+							<h2>Contact</h2>
+							<p>If you have some Questions or need Help! Please Contact Us!<br>We will help you. </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-3">
+						<div class="section-text">
+							<h4>Our Fake(Hahaha..) Office</h4>
+							<p>2562 Street, Aligarh, India, New Building North, 5th Floor</p>
+							<p><i>Phone :</i> 0571 221253</p>
+							<p><i>Email :</i> mail@yourfreeService.com</p><p>&nbsp;</p>
+						</div>
+					</div>
+             </div>
+
+ </section>
+	{% endblock %}
+	</body>
+	</html>
